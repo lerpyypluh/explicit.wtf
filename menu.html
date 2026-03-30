@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>explicit menu</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg: #000;
+    --fg: #fff;
+    --muted: #888;
+    --border: rgba(255,255,255,0.1);
+    --card: rgba(255,255,255,0.03);
+    --hover: rgba(255,255,255,0.08);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* MAIN */
+.main {
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    padding: 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    transition: 0.2s;
+    color: white;
+    background: var(--card);
+}
+
+.btn:hover {
+    background: var(--hover);
+}
+
+/* BACK */
+.back {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.back:hover {
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">explicit</div>
+</nav>
+
+<div class="main">
+    <div class="container">
+        <h1>menu</h1>
+        <p>access everything for explicit.</p>
+
+        <div class="buttons">
+            <!-- REPLACE THESE LINKS -->
+            <a href="https://discord.gg/4w5xe36nnF" target="_blank" class="btn">
+                join discord
+            </a>
+
+            <a href="https://github.com/lerpyypluh" target="_blank" class="btn">
+                github page
+            </a>
+        </div>
+
+        <a href="/" class="back">← back</a>
+    </div>
+</div>
+
+</body>
+</html>
